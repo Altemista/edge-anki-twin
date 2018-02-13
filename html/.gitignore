@@ -1,5 +1,6 @@
 .tmp
 .sass-cache
 node_modules
-bower_components
+bower_components/*
+!bower_components/bootstrap-sass-official
 package-lock.json
