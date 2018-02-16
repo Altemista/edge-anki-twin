@@ -1,4 +1,5 @@
 [
+  {"model": "Choose a Car", "btid": "", "img": "placeholder.jpg"},
   {"model": "1 SKULL (BLACK)", "btid": "e6d3ac9af37e", "img": "skull.jpg"},
   {"model": "2 GROUNDSHOCK (BLUE)", "btid": "da817193ce9c", "img": "groundshock.jpg"}
 ]
