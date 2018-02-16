@@ -78,7 +78,7 @@ DEALINGS IN THE SOFTWARE.
               <div class="speed-icon">
                 <img class="" ng-src="{{ speedimg }}">
               </div>
-              <div class="speed-text">
+              <div ng-if="car1BtId" class="speed-text">
                 {{ status[1].carSpeed }}
               </div>
             </div>
@@ -102,7 +102,7 @@ DEALINGS IN THE SOFTWARE.
               <div class="lane-icon">
                 <img class="" ng-src="{{ laneimg }}">
               </div>
-              <div class="lane-text">
+              <div ng-if="car1BtId" class="lane-text">
                 <span class="lane-text-left">
                   {{ status[1].laneNo }}
                 </span>
@@ -133,7 +133,7 @@ DEALINGS IN THE SOFTWARE.
               <div class="battery-icon">
                 <img class="" ng-src="{{ car1batteryimg }}">
               </div>
-              <div class="battery-text">
+              <div ng-if="car1BtId" class="battery-text">
                 {{ status[1].carBatteryLevel }}
               </div>
             </div>
@@ -151,11 +151,11 @@ DEALINGS IN THE SOFTWARE.
               <div class="tile-number-icon">
                 <img class="" ng-src="{{ tilenumberimg }}">
               </div>
-              <div class="tile-number-text">
+              <div ng-if="car1BtId" class="tile-number-text">
                 {{ status[1].posTileNo }}
               </div>
             </div>
-            <img class="tile-img" ng-src="{{ car1tileimg }}">
+            <img ng-if="car1BtId" class="tile-img" ng-src="{{ car1tileimg }}">
           </td>
           <td>
             <a ng-click="toggleCollisionImage()" class="btn btn-link">
@@ -191,7 +191,7 @@ DEALINGS IN THE SOFTWARE.
               <div class="speed-icon">
                 <img class="" ng-src="{{ speedimg }}">
               </div>
-              <div class="speed-text">
+              <div ng-if="car2BtId" class="speed-text">
                 {{ status[2].carSpeed }}
               </div>
             </div>
@@ -215,7 +215,7 @@ DEALINGS IN THE SOFTWARE.
               <div class="lane-icon">
                 <img class="" ng-src="{{ laneimg }}">
               </div>
-              <div class="lane-text">
+              <div ng-if="car2BtId" class="lane-text">
                 <span class="lane-text-left">
                   {{ status[2].laneNo }}
                 </span>
@@ -246,7 +246,7 @@ DEALINGS IN THE SOFTWARE.
               <div class="battery-icon">
                 <img class="" ng-src="{{ car2batteryimg }}">
               </div>
-              <div class="battery-text">
+              <div ng-if="car2BtId" class="battery-text">
                 {{ status[2].carBatteryLevel }}
               </div>
             </div>
@@ -264,11 +264,11 @@ DEALINGS IN THE SOFTWARE.
               <div class="tile-number-icon">
                 <img class="" ng-src="{{ tilenumberimg }}">
               </div>
-              <div class="tile-number-text">
+              <div ng-if="car2BtId" class="tile-number-text">
                 {{ status[2].posTileNo }}
               </div>
             </div>
-            <img class="tile-img" ng-src="{{ car2tileimg }}">
+            <img ng-if="car2BtId" class="tile-img" ng-src="{{ car2tileimg }}">
           </td>
           <td>
             <a ng-click="toggleCollisionImage()" class="btn btn-link">

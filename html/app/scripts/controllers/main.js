@@ -62,6 +62,13 @@ function refreshLoop($scope, $timeout, MainFactory) {
         $scope.car2img = $scope.findImgFileForId($scope.car2BtId);
         $scope.car1tileimg = $scope.findImgFileForTileType($scope.status[1].posTileType);
         $scope.car2tileimg = $scope.findImgFileForTileType($scope.status[2].posTileType);
+
+        if (!$scope.car1BtId) {
+          $scope.status[1].carBatteryLevel = -1;
+        }
+        if (!$scope.car2BtId) {
+          $scope.status[2].carBatteryLevel = -1;
+        }
         $scope.car1batteryimg = $scope.findImgFileForBatteryLevel($scope.status[1].carBatteryLevel);
         $scope.car2batteryimg = $scope.findImgFileForBatteryLevel($scope.status[2].carBatteryLevel);
 			},
@@ -70,7 +77,7 @@ function refreshLoop($scope, $timeout, MainFactory) {
 
 				// DEBUG: use some mock data if the back-end is missing
         $scope.status[1].carID = 'fb8f2bab1e4b';
-        $scope.status[2].carID = 'fb2c43ca4073';
+        $scope.status[2].carID = '';
         $scope.car1BtId = $scope.status[1].carID;
         $scope.car2BtId = $scope.status[2].carID;
         $scope.status[1].laneOffset = '1';
@@ -89,6 +96,13 @@ function refreshLoop($scope, $timeout, MainFactory) {
         $scope.car2img = $scope.findImgFileForId($scope.status[2].carID);
         $scope.car1tileimg = $scope.findImgFileForTileType($scope.status[1].posTileType);
         $scope.car2tileimg = $scope.findImgFileForTileType($scope.status[2].posTileType);
+
+        if (!$scope.car1BtId) {
+          $scope.status[1].carBatteryLevel = -1;
+        }
+        if (!$scope.car2BtId) {
+          $scope.status[2].carBatteryLevel = -1;
+        }
         $scope.car1batteryimg = $scope.findImgFileForBatteryLevel($scope.status[1].carBatteryLevel);
         $scope.car2batteryimg = $scope.findImgFileForBatteryLevel($scope.status[2].carBatteryLevel);
         $scope.imageUrl = '/images/capture.jpg';
@@ -364,6 +378,7 @@ angular.module('htmlApp')
 		$scope.imgFilePrefix = 'images/';
 
 		$scope.imgFileForId = [
+      {'model': 'Choose a Car', 'btid': '', 'img': 'placeholder.jpg'},
       {'model': '0 GROUNDSHOCK (BLUE)', 'btid': 'edef582991e2', 'img': 'groundshock.jpg'},
       {'model': '1 SKULL (BLACK)', 'btid': 'fb8f2bab1e4b', 'img': 'skull.jpg'},
       {'model': '2 NUKE (GREEN/BLACK)', 'btid': 'fb2c43ca4073', 'img': 'nuke.jpg'},
@@ -463,6 +478,7 @@ angular.module('htmlApp')
 
           // DEBUG: use mock data for cars if the back-end is missing
           $scope.cars = [
+            {'model': 'Choose a Car', 'btid': '', 'img': 'placeholder.jpg'},
             {'model': '0 GROUNDSHOCK (BLUE)', 'btid': 'edef582991e2', 'img': 'groundshock.jpg'},
             {'model': '1 SKULL (BLACK)', 'btid': 'fb8f2bab1e4b', 'img': 'skull.jpg'},
             {'model': '2 NUKE (GREEN/BLACK)', 'btid': 'fb2c43ca4073', 'img': 'nuke.jpg'},
