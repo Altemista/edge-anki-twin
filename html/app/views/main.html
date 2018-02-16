@@ -157,11 +157,7 @@ DEALINGS IN THE SOFTWARE.
             </div>
             <img ng-if="car1BtId" class="tile-img" ng-src="{{ car1tileimg }}">
           </td>
-          <td>
-            <a ng-click="toggleCollisionImage()" class="btn btn-link">
-              <span class="glyphicon glyphicon-ban-circle"></span>
-            </a>
-          </td>
+          <td class="empty-glyph-cell"></td>
         </tr>
       </table>
     </div>
@@ -270,14 +266,26 @@ DEALINGS IN THE SOFTWARE.
             </div>
             <img ng-if="car2BtId" class="tile-img" ng-src="{{ car2tileimg }}">
           </td>
+          <td class="empty-glyph-cell"></td>
+        </tr>
+      </table>
+    </div>
+    <br style="clear: left" />
+  </div>
+</div>
+<div class="footer">
+  <div class="toggle-control-container tableview">
+    <div class="enclosed">
+      <table class="table">
+        <tr>
+          <td>Camera Display Switch</td>
           <td>
             <a ng-click="toggleCollisionImage()" class="btn btn-link">
-              <span class="glyphicon glyphicon-ban-circle"></span>
+              <span class="glyphicon glyphicon-camera"></span>
             </a>
           </td>
         </tr>
       </table>
     </div>
-    <br style="clear: left" />
   </div>
 </div>

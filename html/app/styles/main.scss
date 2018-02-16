@@ -122,7 +122,6 @@ body {
   width: 600px;
  	padding-right: 15px;
  	padding-left: 15px;
- 	margin-bottom: 15px;
 }
 
 .car-control-container .enclosed {
@@ -134,6 +133,7 @@ body {
   border-spacing: 0 6px;
   border-collapse: separate;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 .table tbody > tr > td {
@@ -245,4 +245,20 @@ body {
   margin-left: 25px;
   width: 75px;
   height: 45px;
+}
+
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.toggle-control-container {
+  width: 400px;
+ 	padding-right: 15px;
+ 	padding-left: 15px;
+}
+
+.empty-glyph-cell {
+  height: 80px;
 }
